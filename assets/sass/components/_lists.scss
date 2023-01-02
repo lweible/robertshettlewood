@@ -4,28 +4,23 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
-/* Tabs */
+/* Lists */
 
-	ul.tabs {
+	ul.lists {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		display: table; 
+		text-align: center; 
 		margin: 0 0 0 0;
 
 		li {
 			display: inline-block;
-			padding: 0 1em 0 0;
+    		text-align:center;
+		}
 
-			&:last-child {
-				padding-right: 4em;
-			}
-
-			.tab {
-				color: inherit;
-
-				&:before {
-					font-size: 1.25em;
-				}
-			}
+		li.items_inside_li {
+			display:inline-block; 
+			vertical-align:middle;
 		}
 	}
