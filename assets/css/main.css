@@ -167,11 +167,11 @@ h6 {
 
 @media screen and (max-width: 980px) {
   h1 {
-    font-size: 3.25em; } }
+    font-size: 3em; } }
 
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.75em;
     line-height: 1.4; }
   h2 {
     font-size: 1.5em; } }
