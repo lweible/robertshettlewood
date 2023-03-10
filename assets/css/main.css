@@ -295,6 +295,9 @@ hr {
     margin-left: 50%; }
   .row > .col-7 {
     width: 58.33333%; }
+  @media screen and (max-width: 736px) {
+    .row > .col-7 {
+      width: 100%; } }
   .row > .off-7 {
     margin-left: 58.33333%; }
   .row > .col-8 {
