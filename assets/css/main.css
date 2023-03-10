@@ -2005,9 +2005,9 @@ button,
         padding: 2em 0 2em 0 ; } }
   @media screen and (max-width: 736px) {
     #main > .inner {
-      padding: 0 2em 0.1em 2em ; }
+      padding: 0 3em 0.1em 3em ; }
       #main > .inner > section {
-        padding: 1em 0 1em 0 ; } }
+        padding: 3em 0 3em 0 ; } }
 
 /* Sidebar */
 #search form {
@@ -2182,7 +2182,7 @@ button,
   @media screen and (max-width: 736px) {
     #sidebar .toggle {
       text-indent: 7.25em;
-      width: 7.25em; }
+      width: 3.5em; }
       #sidebar .toggle:before {
         color: #7f888f;
         margin-left: -0.0625em;
@@ -2193,11 +2193,10 @@ button,
         background: #5b5b5b;
         border-radius: 0.375em;
         content: '';
-        height: em;
         left: 1em;
         position: absolute;
         top: 1em;
-        width: 5em; } }
+        width: 3em; } }
 
 /* Header */
 #header {
@@ -2237,19 +2236,20 @@ button,
     #header {
       padding-top: 0.75em; }
       #header .logo {
-        font-size: 1em;
+        font-size: 1.25em;
         margin: 0; }
       #header .tabs {
-        height: 5em;
+        height: 1em;
+        font-size: 1em;
         line-height: 5em;
         position: absolute;
-        right: -0.5em;
+        right: 3.5em;
         top: 0; } 
       #header .icons {
         height: 5em;
         line-height: 5em;
         position: absolute;
-        right: -0.5em;
+        right: 0em;
         top: 0; } }
 
 /* Banner */
@@ -2416,3 +2416,12 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+.document {
+  width: 612px;
+  height: 792px; }
+  @media screen and (max-width: 736px) {
+    .document {
+      width: 306px;
+      height: 396px;
+    }}
