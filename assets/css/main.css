@@ -1952,7 +1952,7 @@ button,
       width: calc(100% + 2em); }
       .posts article {
         margin: 0 0 2em 2em;
-        width: calc(50% - 2em); }
+        width: 100%; }
         .posts article:before {
           height: calc(100% + 2em);
           left: -1em; }
