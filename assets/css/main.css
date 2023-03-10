@@ -2426,3 +2426,20 @@ button,
       width: 306px;
       height: 396px;
     }}
+
+.video {
+  width: 960px;
+  height: 572px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+  @media screen and (max-width: 736px) {
+    .video {
+      width: 480px;
+      height: 286px;
+    }}
+  @media screen and (max-width: 480px) {
+    .video {
+      width: 300px;
+      height: 178px;
+    }}
