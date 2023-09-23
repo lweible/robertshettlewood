@@ -91,7 +91,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #000000;
+  color: #ffffff;
   font-family: "Futura", serif;
   font-size: 15pt;
   font-weight: 400;
@@ -105,6 +105,8 @@ body, input, select, textarea {
   @media screen and (max-width: 360px) {
     body, input, select, textarea {
       font-size: 10pt; } }
+  body span, input span, select span, textarea span {
+    background-color: #000000; }
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -121,7 +123,6 @@ a {
       color: inherit; }
 
 strong, b {
-  color: #000000;
   font-weight: 600; }
 
 em, i {
@@ -132,7 +133,7 @@ p {
   font-size: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000000;
+  color: #ffffff;
   font-family: "Futura", serif;
   font-weight: 700;
   line-height: 1.5;
@@ -141,6 +142,8 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
     text-decoration: none;
     border-bottom: 0; }
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    background-color: #000000; }
 
 h1 {
   font-size: 2em;
@@ -1203,6 +1206,19 @@ input[type="radio"] + label:before {
     border: 0;
     padding: 0; }
 
+/* Background Video */
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 /* Icon */
 .icon {
   text-decoration: none;
@@ -2058,7 +2074,7 @@ button,
   -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
-  background-color: #f5f6f7;
+  background-color: #000000;
   font-size: 0.9em;
   position: relative;
   width: 26em; }
@@ -2085,6 +2101,7 @@ button,
       padding: 2.22222em;
       width: calc(100% + 4.44444em); }
   #sidebar .toggle {
+    color: #ffffff;
     text-decoration: none;
     -moz-transition: left 0.5s ease;
     -webkit-transition: left 0.5s ease;
@@ -2343,7 +2360,7 @@ button,
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #3d4449;
+  color: #ffffff;
   font-family: "Futura", serif;
   font-weight: 400;
   letter-spacing: 0.075em;
@@ -2384,7 +2401,7 @@ button,
         -webkit-transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
         -ms-transition: color 0.2s ease-in-out, -ms-transform 0.2s ease-in-out;
         transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-        color: #9fa3a6;
+        color: #5b5b5b;
         content: '\f078';
         position: absolute;
         right: 0; }
@@ -2403,7 +2420,7 @@ button,
   margin: 0.5em 0 0 0;
   padding: 0.5em 0 0 0; }
   #menu > ul > li > ul {
-    color: #9fa3a6;
+    color: #000000;
     display: none;
     margin: 0.5em 0 1.5em 0;
     padding-left: 1em; }
