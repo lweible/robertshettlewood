@@ -1206,19 +1206,6 @@ input[type="radio"] + label:before {
     border: 0;
     padding: 0; }
 
-/* Background Video */
-#background-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
 /* Icon */
 .icon {
   text-decoration: none;
@@ -2453,3 +2440,17 @@ button,
     display: block;
     margin: 0 0 0.75em 0;
     width: 100%; }
+  .video.vertical {
+    aspect-ratio: 9 / 16; }
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
