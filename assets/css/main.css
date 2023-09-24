@@ -114,7 +114,7 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none; }
   a:hover {
     border-bottom-color: #5b5b5b;
@@ -1364,7 +1364,7 @@ input[type="radio"] + label:before {
     top: 0.25em; }
   .image.fit {
     display: block;
-    margin: 0 0 2em 0;
+    margin: 0 0 0.75em 0;
     width: 100%; }
     .image.fit img {
       width: 100%; }
