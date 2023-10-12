@@ -2452,5 +2452,14 @@ button,
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -1;
-}
+  z-index: -1; }
+
+.background {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0 0 0.75em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center; }
