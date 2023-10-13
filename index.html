@@ -28,6 +28,7 @@
 
 							<!-- Header -->
 								<header id="header">
+									<a href="javascript:void(0)" class="menu" onclick="openMenu()"><strong>&#9776;</strong></a>
 									<a href="index.html" class="logo"><strong>Robert<br>Shettlewood</strong></a>
 									<ul class="lists">
 										<li>
@@ -115,40 +116,33 @@
 						</div>
 					</div>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+				<!-- Menu -->
+					<div id="menu" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+						<div class="overlay-content">
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform" id="tiles" style="display:flex">
+									<div class="col-6">
+										<div class="background" onclick="window.location='brand-work.html';" style="background-image:url(images/global/black-box.png);">
+											<h2>Brand Work</h2>
+										</div>
+										<div class="background" tyle="background-image:url(images/global/black-box.png);">
+											<h2>More Stuff</h2>
+										</div>
+									</div>
 
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="converse.html">Converse</a></li>
-										<li><a href="joopiter.html">Joopiter Auction</a></li>
-										<li><a href="timberland.html">Timberland</a></li>
-										<li><a href="madeintheurl.html">madeintheurl</a></li>
-										<li><a href="whoami.html">Who am I?</a></li>
-										<li><a href="styling.html">Styling Portfolio</a></li>
-										<li><a href="photography.html">Photography</a></li>
-										<li><a href="resume.html">Resume</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto: rhshettlewood@gmail.com">rhshettlewood@gmail.com</a></li>
-									</ul>
-								</section>
-
+									<div class="col-6">
+										<div class="background" style="background-image:url(images/global/black-box.png);">
+											<h2>Advertising</h2>
+										</div>
+										<div class="background" style="background-image:url(images/global/black-box.png);">
+											<h2>About Me</h2>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
+				  	</div>
 
 			</div>
 
@@ -160,12 +154,12 @@
 			<script src="assets/js/main.js"></script>
 
 			<script type="text/javascript">
-				function show(shownId) {
-					let ids = ["tiles", "brand-work", "advertising", "more-stuff", "about-me"];
-					for (const id of ids) {
-						console.log(id);
-						document.getElementById(id).style.display = id == shownId ? "flex" : "none";
-					}
+				function openMenu() {
+  					document.getElementById("menu").style.height = "100%";
+				}
+
+				function closeMenu() {
+					document.getElementById("menu").style.height = "0%";
 				}
 			</script>
 	</body>
