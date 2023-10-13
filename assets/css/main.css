@@ -2473,33 +2473,3 @@ button,
   justify-content: center;
   background-size: cover;
   background-position: center; }
-
-/* Overlay */
-
-.overlay {
-  height: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0, 0.75);
-  overflow-x: hidden;
-  transition: 0.5s; }
-
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 50%;
-  text-align: center;
-  margin: auto; }
-
-.overlay a {
-  border-bottom: none;
-  padding: 1em;
-  font-size: 2.5em;
-  display: block;
-  transition: 0.5s; }
-
-.overlay .closebtn {
-  position: absolute; }
