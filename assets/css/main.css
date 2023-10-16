@@ -295,6 +295,9 @@ hr {
     margin-left: 41.66667%; }
   .row > .col-6 {
     width: 50%; }
+    @media screen and (max-width: 736px) {
+      .row > .col-6 {
+        width: 100%; } }
   .row > .off-6 {
     margin-left: 50%; }
   .row > .col-7 {
@@ -2239,6 +2242,10 @@ button,
     font-weight: 700;
     font-size: 1.25em;
     text-align: right; }
+    @media screen and (max-width: 736px) {
+      #header .tabs {
+        visibility: hidden; }
+    }
   #header .icons {
     text-align: right; }
   @media screen and (max-width: 1680px) {
