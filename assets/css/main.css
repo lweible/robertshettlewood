@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Six Caps");
 /*
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -72,7 +72,8 @@ body {
     min-width: 320px; } }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -2266,6 +2267,21 @@ button,
         right: 0em;
         top: 0; } }
 
+/* Greeting */
+#greeting {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  object-position: center; }
+  #greeting h1 {
+    font-size: 9vw;
+    font-family: "Six Caps"; }
+  #greeting img {
+    width: 40%; }
+
 /* Banner */
 #banner {
   padding: 6em 0 4em 0 ;
@@ -2458,6 +2474,18 @@ button,
   height: 100vh;
   object-fit: cover;
   position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2; }
+
+#fullscreen-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
