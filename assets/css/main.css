@@ -1336,6 +1336,7 @@ input[type="radio"] + label:before {
 
 /* Image */
 .image {
+  background: transparent;
   border: 0;
   display: inline-block;
   position: relative; }
@@ -2225,8 +2226,17 @@ button,
   #header .logo {
     border-bottom: 0;
     color: inherit;
-    font-family: "Futura", serif;
-    font-size: 2.5em; }
+    font-family: "Six Caps";
+    font-size: 3em; }
+  #header a {
+    height: 4em;
+    display: flex;
+    align-items: center;
+    border-bottom: 0; }
+  #header img {
+    height: 3em;
+    padding: 0 1em 0 0;
+    display: block; }
   #header .menu {
     border-bottom: 0;
     flex-grow: 0;
@@ -2257,6 +2267,9 @@ button,
       #header .logo {
         font-size: 1.25em;
         margin: 0; }
+      #header img {
+        padding: 0 0.25em 0 0;
+        height: 1.25em; }
       #header .menu {
         font-size: 1.25em;
         margin: 0; }
