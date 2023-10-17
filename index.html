@@ -26,94 +26,42 @@
 									<source src="videos/background/home.mp4" type="video/mp4">
 							  	</video>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Robert<br>Shettlewood</strong></a>
-									<ul class="lists">
-										<li>
-											<ul class="tabs">
-												<li><a href="resume.html" class="tab">RESUME</a></li>
-											</ul>
-										</li>
-										<li>
-											<ul class="icons">
-												<li><a href="https://www.linkedin.com/in/robertshettlewood/" class="icon brands fa-linkedin"></a></li>
-												<li><a href="https://www.instagram.com/internetrobb/" class="icon brands fa-instagram"></a></li>
-												<li><a href="https://linktr.ee/internetrobb" class="icon solid fa-link"></a></li>
-											</ul>
-										</li>
-									</ul>
-								</header>
+							<!-- Landing Page -->
+							<div id="greeting" onclick="document.getElementById('section').scrollIntoView();">
+								<video id="fullscreen-video" autoplay loop muted playsinline poster="images/thumbnails/greeting.jpg">
+									<source src="videos/background/greeting.mp4" type="video/mp4">
+								</video>
+
+								<img src="images/global/logo.png" alt=""></img>
+								<h1>Robert Shettlewood</h1>
+							</div>
 
 							<!-- Section -->
-								<section>
-									<div class="posts">
-									<article>
-										<a href="converse.html" class="image"><img src="images/widgets/converse.png" alt="" /></a>
-										<h2>Converse</h2>
-									</article>
-									<article>
-										<a href="joopiter.html" class="image"><img src="images/widgets/joopiter.png" alt="" /></a>
-										<h2>Joopiter Auction</h2>
-									</article>
-									<article>
-										<a href="timberland.html" class="image"><img src="images/widgets/timberland.png" alt="" /></a>
-										<h2>Timberland</h2>
-									</article>
-									<article>
-										<a href="madeintheurl.html" class="image"><img src="images/widgets/madeintheurl.png" alt="" /></a>
-										<h2>madeintheurl</h2>
-									</article>
-									<article>
-										<a href="whoami.html" class="image"><img src="images/widgets/whoami.png" alt="" /></a>
-										<h2>Who am I?</h2>
-									</article>
-									<article>
-										<a href="styling.html" class="image"><img src="images/widgets/styling.png" alt="" /></a>
-										<h2>Styling Portfolio</h2>
-									</article>
-									<article>
-										<a href="photography.html" class="image"><img src="images/widgets/photography.png" alt="" /></a>
-										<h2>Photography</h2>
-									</article>
+								<section id="section">
+									<div class="content">
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform" id="tiles" style="display:flex">
+												<div class="col-6">
+													<div class="background" onclick="window.location='brand-work.html';" style="background-image:url(images/tiles/brand-work.png);">
+														<h2>Brand Work</h2>
+													</div>
+													<div class="background" onclick="window.location='more-stuff.html';" style="background-image:url(images/tiles/more-stuff.png);">
+														<h2>More Stuff</h2>
+													</div>
+												</div>
+			
+												<div class="col-6">
+													<div class="background" onclick="window.location='advertising.html';" style="background-image:url(images/tiles/advertising.png);">
+														<h2>Advertising</h2>
+													</div>
+													<div class="background" onclick="window.location='about-me.html';" style="background-image:url(images/tiles/about-me.png);">
+														<h2>About Me</h2>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</section>
-
-						</div>
-					</div>
-
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="converse.html">Converse</a></li>
-										<li><a href="joopiter.html">Joopiter Auction</a></li>
-										<li><a href="timberland.html">Timberland</a></li>
-										<li><a href="madeintheurl.html">madeintheurl</a></li>
-										<li><a href="whoami.html">Who am I?</a></li>
-										<li><a href="styling.html">Styling Portfolio</a></li>
-										<li><a href="photography.html">Photography</a></li>
-										<li><a href="resume.html">Resume</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="mailto: rhshettlewood@gmail.com">rhshettlewood@gmail.com</a></li>
-									</ul>
-								</section>
-
 						</div>
 					</div>
 
@@ -125,6 +73,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
