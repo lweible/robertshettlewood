@@ -78,18 +78,18 @@
 										<div class="image-container">
 											<div class="box alt">
 												<div class="row gtr-50 gtr-uniform">
-													<div class="col-12"><span class="image fit"><img src="images/advertising/arizona-cardinals-headlines.png" usemap = "#cardinals-map"  alt="" /></span></div>
+													<div class="col-12"><span class="image fit"><img id="cardinals-headlines" src="images/advertising/arizona-cardinals-headlines.png" usemap = "#cardinals-map"  alt="" /></span></div>
 												</div>
 											</div>
 											
-											<map name="cardinals-map">
+											<map id="cardinals-map" name="cardinals-map">
 												<area shape="rect" 
 													coords="0,0,520,580" 
 													href="https://www.si.com/nfl/arizona-cardinals-schedule-reveal-music-video-mack-wilson-spotify-and-apple-music"
 													alt=""
 													title="Arizona Cardinals release '18 Bars' music video">
 												<area shape="rect" 
-													coords="1270,430,580,0" 
+													coords="580,0,1270,430" 
 													href="https://www.washingtonpost.com/sports/2025/05/15/nfl-schedule-release-videos-2025/ "
 													alt=""
 													title="The best and worst NFL schedule release videos of 2025">
@@ -109,7 +109,7 @@
 													alt=""
 													title="RANKED: The 10 Best NFL Schedule Release Videos of 2025">
 												<area shape="rect" 
-													coords="0,1080,800,520" 
+													coords="0,580,800,1080" 
 													href="https://www.nfl.com/videos/lb-mack-wilson-jr-joins-gmfb-to-talk-performance-of-18-bars-to-announce-cardinals-schedule-release"
 													alt=""
 													title="LB Mack Wilson Jr. joins 'GMFB' to talk '18 Bars'">
@@ -284,25 +284,122 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
-			var slideIndex = [1,1];
-			var slideId = ["slides-cardinals", "slides-doechii"]
-			showDivs(1, 0);
-			showDivs(1, 1);
+				var slideIndex = [1,1];
+				var slideId = ["slides-cardinals", "slides-doechii"]
+				showDivs(1, 0);
+				showDivs(1, 1);
 
-			function plusDivs(n, no) {
-				showDivs(slideIndex[no] += n, no);
-			}
-
-			function showDivs(n, no) {
-				var i;
-				var x = document.getElementsByClassName(slideId[no]);
-				if (n > x.length) {slideIndex[no] = 1}
-				if (n < 1) {slideIndex[no] = x.length}
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";  
+				function plusDivs(n, no) {
+					showDivs(slideIndex[no] += n, no);
 				}
-				x[slideIndex[no]-1].style.display = "block";  
-			}
+
+				function showDivs(n, no) {
+					var i;
+					var x = document.getElementsByClassName(slideId[no]);
+					if (n > x.length) {slideIndex[no] = 1}
+					if (n < 1) {slideIndex[no] = x.length}
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";  
+					}
+					x[slideIndex[no]-1].style.display = "block";  
+				}
 			</script>
+
+			<script>
+				const cardinalsImageMap = {
+					originalWidth: 1920,
+					originalHeight: 1080,
+					
+					areas: [
+						{
+							coords: [0, 0, 520, 580],
+							title: "Cardinals 18 Bars Music Video",
+							href: "https://www.si.com/nfl/arizona-cardinals-schedule-reveal-music-video-mack-wilson-spotify-and-apple-music"
+						},
+						{
+							coords: [580, 0, 1270, 430],
+							title: "Best and Worst NFL Schedule Videos",
+							href: "https://www.washingtonpost.com/sports/2025/05/15/nfl-schedule-release-videos-2025/"
+						},
+						{
+							coords: [800, 430, 1370, 1080],
+							title: "Mack Wilson Grammy vs Super Bowl",
+							href: "https://www.tmz.com/2025/05/17/mack-wilson-sr-cardinals-schedule-grammy-super-bowl/"
+						},
+						{
+							coords: [1280, 0, 1920, 270],
+							title: "Cardinals Music Video Going Viral",
+							href: "https://www.kold.com/video/2025/05/16/arizona-cardinals-music-video-with-mack-wilson-going-viral/"
+						},
+						{
+							coords: [1380, 280, 1920, 1080],
+							title: "Ranked Top 10 NFL Schedule Videos",
+							href: "https://www.si.com/nfl/10-best-nfl-schedule-release-videos-of-2025"
+						},
+						{
+							coords: [0, 580, 800, 1080],
+							title: "Mack Wilson GMFB Interview",
+							href: "https://www.nfl.com/videos/lb-mack-wilson-jr-joins-gmfb-to-talk-performance-of-18-bars-to-announce-cardinals-schedule-release"
+						}
+					]
+				};
+
+				function updateCardinalsImageMap() {
+					const img = document.getElementById('cardinals-headlines');
+					const map = document.getElementById('cardinals-map');
+					const areas = map.getElementsByTagName('area');
+					
+					if (!img || !img.clientWidth || !img.clientHeight) {
+						return;
+					}
+					
+					const scaleX = img.clientWidth / cardinalsImageMap.originalWidth;
+					const scaleY = img.clientHeight / cardinalsImageMap.originalHeight;
+					
+					cardinalsImageMap.areas.forEach((areaData, index) => {
+						if (areas[index]) {
+							const newCoords = [
+								Math.round(areaData.coords[0] * scaleX), // x1
+								Math.round(areaData.coords[1] * scaleY), // y1
+								Math.round(areaData.coords[2] * scaleX), // x2
+								Math.round(areaData.coords[3] * scaleY)  // y2
+							];
+							areas[index].coords = newCoords.join(',');
+						}
+					});
+				}
+
+				// function setupCardinalsClickTracking() {
+				// 	document.querySelectorAll('#cardinals-map area').forEach((area, index) => {
+				// 		area.addEventListener('click', function(e) {
+				// 			const timestamp = new Date().toLocaleTimeString();
+				// 			const logEntry = `
+				// 				<div class="log-entry">
+				// 					<strong>${timestamp}:</strong> Clicked "${this.alt}"<br>
+				// 					<small>URL: ${this.href}</small><br>
+				// 					<small>Current coords: ${this.coords}</small>
+				// 				</div>
+				// 			`;
+							
+				// 			const logContent = document.getElementById('click-log-content');
+				// 			if (logContent.innerHTML.includes('<em>')) {
+				// 				logContent.innerHTML = '';
+				// 			}
+				// 			logContent.insertAdjacentHTML('afterbegin', logEntry);
+				// 		});
+				// 	});
+				// }
+
+				window.addEventListener('load', updateCardinalsImageMap);
+				window.addEventListener('resize', function() {
+					updateCardinalsImageMap();
+				});
+
+				document.getElementById('cardinals-headlines').addEventListener('load', updateCardinalsImageMap);
+
+				window.addEventListener('orientationchange', function() {
+					setTimeout(updateCardinalsImageMap, 100);
+				});
+    </script>
 	</body>
 </html>
