@@ -1269,7 +1269,6 @@ input[type="radio"] + label:before {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 960px;
   position: relative;
   margin: auto;
 }
