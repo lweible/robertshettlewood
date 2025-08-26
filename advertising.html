@@ -119,19 +119,19 @@
 										<p>Together we turned matchups into music - blending sports, culture, and creativity into one unforgettable schedule reveal.</p>
 										<div class="slideshow-container">
 											<!-- Full-width images with number and caption text -->
-											<div class="slides">
+											<div class="slides-cardinals">
 												<div class="row gtr-50 gtr-uniform">
 													<div class="col-12"><span class="image fit"><img src="images/advertising/18-bars-1.png" alt="" /></span></div>
 												</div>
 											</div>
 
-											<div class="slides">
+											<div class="slides-cardinals">
 												<div class="row gtr-50 gtr-uniform">
 													<div class="col-12"><span class="image fit"><img src="images/advertising/18-bars-2.png" alt="" /></span></div>
 												</div>
 											</div>
-											<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-											<a class="next" onclick="plusSlides(1)">&#10095;</a>
+											<a class="prev" onclick="plusDivs(-1, 0)">&#10094;</a>
+											<a class="next" onclick="plusDivs(1, 0)">&#10095;</a>
 										</div>
 										<p></p>
 										<div class="box alt">
@@ -161,6 +161,36 @@
 										<p>And we even made it to <a href="https://www.rollingstone.com/music/music-news/doechii-live-from-the-swamp-tour-dates-1235399481/">Rolling Stone</a>.</p>
 										<div class="row gtr-50 gtr-uniform">
 											<div class="col-12"><span class="image fit"><img src="images/advertising/doechii-3.png" alt="" /></span></div>
+										</div>
+										<p></p>
+										<div class="slideshow-container">
+											<div class="slides">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/advertising/doechii-social-1.png" alt="" /></span></div>
+												</div>
+											</div>
+											<div class="slides-doechii">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/advertising/doechii-social-2.png" alt="" /></span></div>
+												</div>
+											</div>
+											<div class="slides-doechii">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/advertising/doechii-social-3.png" alt="" /></span></div>
+												</div>
+											</div>
+											<div class="slides-doechii">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/advertising/doechii-social-4.png" alt="" /></span></div>
+												</div>
+											</div>
+											<div class="slides-doechii">
+												<div class="row gtr-50 gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/advertising/doechii-social-5.png" alt="" /></span></div>
+												</div>
+											</div>
+											<a class="prev" onclick="plusDivs(-1, 1)">&#10094;</a>
+											<a class="next" onclick="plusDivs(1, 1)">&#10095;</a>
 										</div>
 
 										<hr class="major" />
@@ -254,22 +284,24 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
-			let slideIndex = 1;
-			showSlides(slideIndex);
+			var slideIndex = [1,1];
+			var slideId = ["slides-cardinals", "slides-doechii"]
+			showDivs(1, 0);
+			showDivs(1, 1);
 
-			function plusSlides(n) {
-				showSlides(slideIndex += n);
+			function plusDivs(n, no) {
+				showDivs(slideIndex[no] += n, no);
 			}
 
-			function showSlides(n) {
-				let i;
-				let slides = document.getElementsByClassName("slides");
-				if (n > slides.length) {slideIndex = 1}    
-				if (n < 1) {slideIndex = slides.length}
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";  
+			function showDivs(n, no) {
+				var i;
+				var x = document.getElementsByClassName(slideId[no]);
+				if (n > x.length) {slideIndex[no] = 1}
+				if (n < 1) {slideIndex[no] = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
 				}
-				slides[slideIndex-1].style.display = "block";  
+				x[slideIndex[no]-1].style.display = "block";  
 			}
 			</script>
 	</body>
